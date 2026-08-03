@@ -1,16 +1,29 @@
-import { NavLink, Link } from "react-router-dom";
+import { useState } from "react";
+import imageLogo from "../images/TPI black bg.png";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   const activeStyles = {
     fontWeight: "bold",
     textDecoration: "underline",
-    color: "#5647B7",
+    color: "#FFFFFF",
+  };
+
+  const [showLinks, setShowLinks] = useState(false);
+  const navToggle = () => {
+    setShowLinks((current) => !current);
   };
 
   return (
     <header>
-      <Link to="/"></Link>
-      <nav>
+      <div className="nav-center">
+        <img src={imageLogo} className="nav-logo" alt="logo" />
+        <button className="nav-toggle" onClick={navToggle}>
+          <i className="fas fa-bars"></i>
+        </button>
+      </div>
+      {/* links */}
+      <ul className={showLinks ? "links show-links" : "links"}>
         <NavLink
           to="/"
           style={({ isActive }) => (isActive ? activeStyles : undefined)}
@@ -18,18 +31,24 @@ const Header = () => {
           Home
         </NavLink>
         <NavLink
-          to="/about"
+          to=""
+          style={({ isActive }) => (isActive ? activeStyles : undefined)}
+        >
+          Projects
+        </NavLink>
+        <NavLink
+          to="about"
           style={({ isActive }) => (isActive ? activeStyles : undefined)}
         >
           About
         </NavLink>
         <NavLink
-          to="/contact"
+          to="cap"
           style={({ isActive }) => (isActive ? activeStyles : undefined)}
         >
-          Contact
+          Capability Statement
         </NavLink>
-      </nav>
+      </ul>
     </header>
   );
 };
