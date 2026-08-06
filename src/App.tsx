@@ -24,12 +24,12 @@ const routeMeta: Record<string, { title: string; description: string }> = {
   "/": {
     title: "Tech Pathways Initiative | Technology Education for Cleveland Youth",
     description:
-      "Tech Pathways Initiative provides technology education, mentorship, career exposure, and workforce development for youth in underserved Greater Cleveland communities.",
+      "Tech Pathways Initiative equips youth in underserved Greater Cleveland communities with technical education, caring mentorship, career exposure, and professional skills that prepare them for rewarding careers in technology.",
   },
   "/about": {
     title: "About Us | Tech Pathways Initiative",
     description:
-      "Learn why Tech Pathways Initiative was founded to serve Black and Brown youth in Cleveland, Greater Cleveland, and Northeast Ohio through technology opportunity.",
+      "Learn why Tech Pathways Initiative was founded to serve youth in underserved Cleveland, Greater Cleveland, and Northeast Ohio communities through technology opportunity.",
   },
   "/programs": {
     title: "Programs in Development | Tech Pathways Initiative",
@@ -326,7 +326,7 @@ function SiteFooter() {
           <h2>Tech Pathways Initiative</h2>
           <p>
             Tech Pathways Initiative is a Cleveland-based nonprofit organization creating pathways
-            into technology careers for Black and Brown youth in underserved communities.
+            into technology careers for youth in underserved communities.
           </p>
           <p className="footer-copyright">
             © {new Date().getFullYear()} Tech Pathways Initiative. All rights reserved.
@@ -418,3 +418,6 @@ function App() {
 }
 
 export default App;
+
+
+

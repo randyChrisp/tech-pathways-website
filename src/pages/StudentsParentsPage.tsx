@@ -114,7 +114,7 @@ export function StudentsParentsPage() {
           <article className="info-tile">
             <h3>Who is eligible?</h3>
             <p>
-              Black and Brown youth in underserved Greater Cleveland communities, primarily in
+              Youth in underserved Greater Cleveland communities, primarily in
               middle school, high school, and early postsecondary settings.
             </p>
           </article>
@@ -339,3 +339,4 @@ export function StudentsParentsPage() {
     </main>
   );
 }
+
