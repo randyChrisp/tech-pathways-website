@@ -14,7 +14,8 @@ const placeholderArticles = [
     slug: "welcome-to-tpi",
     category: "All Updates",
     date: "Coming soon",
-    title: "Tech Pathways Initiative: Building Student Pathways from the Ground Up",
+    title:
+      "Tech Pathways Initiative: Building Student Pathways from the Ground Up",
     summary:
       "An introduction to Tech Pathways Initiative, our founding mission, the communities we intend to serve, and what you can expect as we prepare to launch programs in Greater Cleveland.",
   },
@@ -30,7 +31,8 @@ const placeholderArticles = [
     slug: "pilot-partner-invitation",
     category: "Partner News",
     date: "Coming soon",
-    title: "Invitation to Schools and Organizations: Become a Pilot Program Partner",
+    title:
+      "Invitation to Schools and Organizations: Become a Pilot Program Partner",
     summary:
       "Tech Pathways Initiative is actively seeking schools, youth organizations, and community partners in Greater Cleveland to collaborate on pilot program design, student enrollment, and site hosting.",
   },
@@ -46,7 +48,8 @@ const placeholderArticles = [
     slug: "cleveland-tech-opportunities",
     category: "Cleveland Opportunities",
     date: "Coming soon",
-    title: "Technology Career Opportunities in Greater Cleveland: What Students Should Know",
+    title:
+      "Technology Career Opportunities in Greater Cleveland: What Students Should Know",
     summary:
       "An overview of growing technology sectors, employers, and educational pathways available to students in the Greater Cleveland area.",
   },
@@ -59,23 +62,23 @@ export function NewsPage() {
         <div className="inner-hero-layout">
           <div className="inner-hero-copy">
             <p className="eyebrow">News &amp; Resources</p>
-            <h1>Updates, insights, and resources from Tech Pathways Initiative.</h1>
+            <h1>
+              Updates, insights, and resources from Tech Pathways Initiative.
+            </h1>
             <p className="hero-description">
-              As Tech Pathways Initiative grows, this page will publish program updates, student
-              stories, technology career profiles, partner announcements, and resources for
-              families and communities. The articles below represent upcoming topics.
+              As Tech Pathways Initiative grows, this page will publish program
+              updates, student stories, technology career profiles, partner
+              announcements, and resources for families and communities. The
+              articles below represent upcoming topics.
             </p>
           </div>
           <div className="program-status-card">
             <h2>Content in development.</h2>
             <p>
-              Subscribe to receive updates when articles, event announcements, and resources are
-              published.
+              Subscribe to receive updates when articles, event announcements,
+              and resources are published.
             </p>
-            <a
-              className="button button-secondary"
-              href="#news-subscribe"
-            >
+            <a className="button button-secondary" href="#news-subscribe">
               Subscribe for Updates
             </a>
           </div>
@@ -85,7 +88,10 @@ export function NewsPage() {
       <section className="section">
         <div className="section-heading">
           <p className="section-label">Topics We Will Cover</p>
-          <h2>Content will span programs, careers, students, and the Greater Cleveland community.</h2>
+          <h2>
+            Content will span programs, careers, students, and the Greater
+            Cleveland community.
+          </h2>
         </div>
         <div className="category-pills" aria-label="News categories">
           {categories.map((cat) => (
@@ -101,8 +107,8 @@ export function NewsPage() {
           <p className="section-label">Upcoming Articles</p>
           <h2>Articles being planned and written for this section.</h2>
           <p>
-            These topics reflect planned content. Articles will be marked as published when
-            completed.
+            These topics reflect planned content. Articles will be marked as
+            published when completed.
           </p>
         </div>
         <div className="news-grid">
@@ -124,10 +130,14 @@ export function NewsPage() {
         <div className="newsletter-layout">
           <div>
             <p className="section-label">Stay Informed</p>
-            <h2>Get notified when new content, events, and program updates are published.</h2>
+            <h2>
+              Get notified when new content, events, and program updates are
+              published.
+            </h2>
             <p>
-              Whether you are a student, parent, educator, mentor, or community member, our
-              newsletter will keep you connected to what is happening at Tech Pathways Initiative.
+              Whether you are a student, parent, educator, mentor, or community
+              member, our newsletter will keep you connected to what is
+              happening at Tech Pathways Initiative.
             </p>
           </div>
           <NewsSubscribeForm />

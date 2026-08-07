@@ -44,18 +44,22 @@ export function ImpactPage() {
         <div className="inner-hero-layout">
           <div className="inner-hero-copy">
             <p className="eyebrow">Impact</p>
-            <h1>Measuring what matters, starting with clear first-year goals.</h1>
+            <h1>
+              Measuring what matters, starting with clear first-year goals.
+            </h1>
             <p className="hero-description">
-              Tech Pathways Initiative has not yet launched programs, so this page reflects
-              planned goals rather than completed results. Our commitment is to report honestly —
-              goals until we have outcomes, and outcomes once students have been served.
+              Tech Pathways Initiative has not yet launched programs, so this
+              page reflects planned goals rather than completed results. Our
+              commitment is to report honestly — goals until we have outcomes,
+              and outcomes once students have been served.
             </p>
           </div>
           <div className="program-status-card">
             <h2>Goals, not invented statistics.</h2>
             <p>
-              We believe transparent goal-setting builds more trust than premature claims. This
-              page will be updated as programs launch and data becomes available.
+              We believe transparent goal-setting builds more trust than
+              premature claims. This page will be updated as programs launch and
+              data becomes available.
             </p>
           </div>
         </div>
@@ -66,8 +70,9 @@ export function ImpactPage() {
           <p className="section-label">First-Year Goals</p>
           <h2>What Tech Pathways Initiative is working toward in year one.</h2>
           <p>
-            These targets will guide our pilot program planning, partnership development, and
-            resource allocation as we move from design to delivery.
+            These targets will guide our pilot program planning, partnership
+            development, and resource allocation as we move from design to
+            delivery.
           </p>
         </div>
         <div className="impact-grid" style={{ marginTop: "2rem" }}>
@@ -84,10 +89,14 @@ export function ImpactPage() {
       <section className="section section-soft">
         <div className="section-heading">
           <p className="section-label">How We Will Measure Success</p>
-          <h2>These metrics will be tracked once programs launch and students are enrolled.</h2>
+          <h2>
+            These metrics will be tracked once programs launch and students are
+            enrolled.
+          </h2>
           <p>
-            We are setting up accountability systems now so that meaningful data is available when
-            programs begin. Each metric below will be reported publicly in annual updates.
+            We are setting up accountability systems now so that meaningful data
+            is available when programs begin. Each metric below will be reported
+            publicly in annual updates.
           </p>
         </div>
         <div className="future-metrics-list">
@@ -103,15 +112,20 @@ export function ImpactPage() {
       <section className="section">
         <div className="section-heading">
           <p className="section-label">Student Stories</p>
-          <h2>Student and parent testimonials will be shared as programs progress.</h2>
+          <h2>
+            Student and parent testimonials will be shared as programs progress.
+          </h2>
           <p>
-            Once pilot cohorts complete programming, we will feature student experiences and
-            family perspectives here with proper consent. We do not fabricate or anticipate
-            testimonials.
+            Once pilot cohorts complete programming, we will feature student
+            experiences and family perspectives here with proper consent. We do
+            not fabricate or anticipate testimonials.
           </p>
         </div>
         <div className="testimonial-placeholder">
-          <p>Student stories will appear here after programs launch and participants provide consent.</p>
+          <p>
+            Student stories will appear here after programs launch and
+            participants provide consent.
+          </p>
         </div>
       </section>
 
@@ -120,9 +134,9 @@ export function ImpactPage() {
           <p className="section-label">Annual Reports</p>
           <h2>Reporting will begin after the first full program year.</h2>
           <p>
-            Tech Pathways Initiative will publish an annual impact report covering program
-            activity, financial stewardship, and student outcomes. Reports will be made
-            available publicly on this page.
+            Tech Pathways Initiative will publish an annual impact report
+            covering program activity, financial stewardship, and student
+            outcomes. Reports will be made available publicly on this page.
           </p>
         </div>
         <div className="report-placeholder">
@@ -134,19 +148,16 @@ export function ImpactPage() {
         <div className="cta-panel">
           <div>
             <p className="section-label">Help Build the Impact</p>
-            <h2>Early partners and supporters directly influence what we can achieve.</h2>
+            <h2>
+              Early partners and supporters directly influence what we can
+              achieve.
+            </h2>
           </div>
           <div className="cta-actions">
-            <a
-              className="button button-primary"
-              href="/get-involved"
-            >
+            <a className="button button-primary" href="/get-involved">
               Get Involved
             </a>
-            <a
-              className="button button-secondary"
-              href="/#donate"
-            >
+            <a className="button button-secondary" href="/#donate">
               Support Financially
             </a>
           </div>

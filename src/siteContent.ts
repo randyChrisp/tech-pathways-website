@@ -5,14 +5,16 @@ import heroStemProjectImage from "./images/hero-stem-project.jpg";
 import mentorshipCardImage from "./images/mentorship-card.jpg";
 import volunteerCollaborationImage from "./images/volunteer-collaboration.jpg";
 
-export const missionStatement =
-  "To empower inner city youth in underserved communities through technology education, mentorship, career exposure, and workforce development opportunities that create pathways into high-paying IT careers.";
+export const primaryMissionStatement =
+  "To empower youth in underserved communities through technology education, mentorship, career exposure, and workforce development opportunities that create pathways into high-paying technology careers.";
 
+export const missionStatement =
+  "Tech Pathways Initiative empowers youth in underserved Greater Cleveland communities through technology education, mentorship, career exposure, and workforce development-creating pathways to high-paying technology careers.";
 export const heroCopy =
-  "Tech Pathways Initiative equips Black and Brown youth in underserved Greater Cleveland communities with the education, mentorship, career exposure, and professional skills needed to pursue rewarding careers in technology.";
+  "Tech Pathways Initiative equips youth in underserved Greater Cleveland communities with technical education, caring mentorship, career exposure, and professional skills that prepare them for rewarding careers in technology.";
 
 export const visionStatement =
-  "We envision a future in which every young person-regardless of race, income, or ZIP code-has the exposure, preparation, relationships, and opportunity needed to succeed in the technology workforce.";
+  "We envision a future where every young person-regardless of income, neighborhood, or background-has access to the education, guidance, and opportunities needed to succeed in the technology workforce.";
 
 export const pathwaySteps = [
   {
@@ -332,7 +334,7 @@ export const programsInDevelopment: ProgramDevelopmentDetail[] = [
 ];
 
 export const aboutStory = [
-  "Tech Pathways Initiative was founded to close the distance between student potential and technology opportunity. In many underserved communities, talented young people have ambition but too few opportunities to see what a future in technology can look like.",
+  "Tech Pathways Initiative was established to help close the technology opportunity gap by providing young people in underserved communities with access to technical education, professional mentors, career exploration, and workforce preparation.",
   "The organization exists to create earlier access to exposure, skills-building, mentorship, and workforce preparation so that students can move from curiosity to confidence and from confidence to career readiness.",
 ];
 
@@ -350,7 +352,7 @@ export const communitiesServed = [
   {
     title: "Communities Served",
     description:
-      "Black and Brown youth in underserved Greater Cleveland neighborhoods and partner school communities.",
+      "Youth in underserved Greater Cleveland neighborhoods and partner school communities.",
   },
   {
     title: "Age Groups",
@@ -406,5 +408,9 @@ export const founderMessagePlaceholder =
   "Personal founder's message coming soon. This space can later highlight Randy Chrisp's personal motivation, lived experience, and long-term vision for Tech Pathways Initiative.";
 
 export const aboutImage = volunteerCollaborationImage;
+
+
+
+
 
 

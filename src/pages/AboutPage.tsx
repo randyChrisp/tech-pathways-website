@@ -21,8 +21,9 @@ export function AboutPage() {
             <p className="eyebrow">About Us</p>
             <h1>Building access, guidance, and opportunity for the next generation.</h1>
             <p className="hero-description">
-              Tech Pathways Initiative was founded to help students see technology as a future they
-              can enter, shape, and lead.
+              Tech Pathways Initiative was established to help close the technology opportunity gap
+              by providing young people in underserved communities with access to technical
+              education, professional mentors, career exploration, and workforce preparation.
             </p>
           </div>
           <figure className="inner-hero-media">
@@ -160,3 +161,6 @@ export function AboutPage() {
     </main>
   );
 }
+
+
+

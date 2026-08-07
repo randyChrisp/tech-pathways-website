@@ -5,17 +5,36 @@ const contactReasons = [
   { value: "student-parent", label: "Student or parent interest" },
   { value: "mentoring", label: "Mentoring" },
   { value: "volunteering", label: "Volunteering" },
-  { value: "school-community-partnership", label: "School or community partnership" },
+  {
+    value: "school-community-partnership",
+    label: "School or community partnership",
+  },
   { value: "corporate-sponsorship", label: "Corporate sponsorship" },
   { value: "media-inquiry", label: "Media inquiry" },
   { value: "general", label: "General question" },
 ];
 
 const socialLinks = [
-  { label: "LinkedIn", href: "https://linkedin.com/company/techpathwaysinitiative", handle: "@techpathwaysinitiative" },
-  { label: "Instagram", href: "https://instagram.com/techpathwaysinitiative", handle: "@techpathwaysinitiative" },
-  { label: "Facebook", href: "https://facebook.com/techpathwaysinitiative", handle: "Tech Pathways Initiative" },
-  { label: "X (Twitter)", href: "https://twitter.com/techpathwaysinit", handle: "@techpathwaysinit" },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/company/techpathwaysinitiative",
+    handle: "@techpathwaysinitiative",
+  },
+  {
+    label: "Instagram",
+    href: "https://instagram.com/techpathwaysinitiative",
+    handle: "@techpathwaysinitiative",
+  },
+  {
+    label: "Facebook",
+    href: "https://facebook.com/techpathwaysinitiative",
+    handle: "Tech Pathways Initiative",
+  },
+  {
+    label: "X (Twitter)",
+    href: "https://twitter.com/techpathwaysinit",
+    handle: "@techpathwaysinit",
+  },
 ];
 
 export function ContactPage() {
@@ -35,16 +54,16 @@ export function ContactPage() {
             <p className="eyebrow">Contact</p>
             <h1>Get in touch with Tech Pathways Initiative.</h1>
             <p className="hero-description">
-              Whether you are a student, parent, mentor, educator, employer, or community partner,
-              we want to hear from you. Use the form below to send a message, or reach out directly
-              by email.
+              Whether you are a student, parent, mentor, educator, employer, or
+              community partner, we want to hear from you. Use the form below to
+              send a message, or reach out directly by email.
             </p>
           </div>
           <div className="program-status-card">
             <h2>We aim to respond within 3 to 5 business days.</h2>
             <p>
-              All inquiries are reviewed by the Tech Pathways Initiative team. We respond to every
-              message as quickly as possible.
+              All inquiries are reviewed by the Tech Pathways Initiative team.
+              We respond to every message as quickly as possible.
             </p>
           </div>
         </div>
@@ -55,14 +74,27 @@ export function ContactPage() {
           <div className="contact-form-col">
             <p className="section-label">Send a Message</p>
             <h2>Tell us who you are and how we can help.</h2>
-            <form className="interest-form contact-form" onSubmit={handleSubmit}>
+            <form
+              className="interest-form contact-form"
+              onSubmit={handleSubmit}
+            >
               <label>
                 Full Name
-                <input type="text" name="name" placeholder="Your full name" required />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Your full name"
+                  required
+                />
               </label>
               <label>
                 Email Address
-                <input type="email" name="email" placeholder="you@example.com" required />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
               </label>
               <label>
                 Organization or Affiliation
@@ -96,7 +128,8 @@ export function ContactPage() {
               </button>
               {submitted && (
                 <p className="form-success" role="status">
-                  Thank you for reaching out. We will respond within 3 to 5 business days.
+                  Thank you for reaching out. We will respond within 3 to 5
+                  business days.
                 </p>
               )}
             </form>
@@ -116,21 +149,27 @@ export function ContactPage() {
               <p>Greater Cleveland, Ohio</p>
 
               <h3>Response Time</h3>
-              <p>We aim to respond to all inquiries within 3 to 5 business days.</p>
+              <p>
+                We aim to respond to all inquiries within 3 to 5 business days.
+              </p>
             </div>
 
             <div className="contact-social-card">
               <p className="section-label">Follow Us</p>
               <h3>Social Media</h3>
               <p className="contact-social-note">
-                Social media accounts are being established. Links will be updated as channels
-                are launched.
+                Social media accounts are being established. Links will be
+                updated as channels are launched.
               </p>
               <ul className="social-links-list">
                 {socialLinks.map((link) => (
                   <li key={link.label}>
                     <strong>{link.label}:</strong>{" "}
-                    <a href={link.href} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {link.handle}
                     </a>
                   </li>
