@@ -57,7 +57,7 @@ export function AboutPage() {
           </article>
           <article className="info-panel">
             <p className="section-label">Vision</p>
-            <h2>A future where opportunity is not limited by race, income, or ZIP code.</h2>
+            <h2>A future where opportunity is not limited by ZIP code, household income, or access to resources.</h2>
             <p>{visionStatement}</p>
           </article>
         </div>
@@ -66,7 +66,7 @@ export function AboutPage() {
       <section className="section">
         <div className="section-heading">
           <p className="section-label">Core Values</p>
-          <h2>The commitments that shape our programs, partnerships, and decisions.</h2>
+          <h2>We work to reduce economic, geographic, educational, and technology-access barriers that can prevent young people from pursuing technology opportunities.</h2>
         </div>
         <div className="values-grid">
           {coreValues.map((value) => (
@@ -161,6 +161,7 @@ export function AboutPage() {
     </main>
   );
 }
+
 
 
 
