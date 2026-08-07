@@ -76,18 +76,21 @@ export function StudentsParentsPage() {
         <div className="inner-hero-layout">
           <div className="inner-hero-copy">
             <p className="eyebrow">Students &amp; Parents</p>
-            <h1>Help your student explore what is possible through technology.</h1>
+            <h1>
+              Help your student explore what is possible through technology.
+            </h1>
             <p className="hero-description">
-              Tech Pathways Initiative is developing programs specifically for youth in Greater
-              Cleveland who are ready to explore technology education, mentorship, and career
-              pathways. Programs are not yet launched, but you can get on the list now.
+              Tech Pathways Initiative is developing programs specifically for
+              youth in Greater Cleveland who are ready to explore technology
+              education, mentorship, and career pathways. Programs are not yet
+              launched, but you can get on the list now.
             </p>
           </div>
           <div className="program-status-card">
             <h2>Be the first to know.</h2>
             <p>
-              Programs are currently in development. Join the interest list and we will reach out
-              when enrollment opens in your area.
+              Programs are currently in development. Join the interest list and
+              we will reach out when enrollment opens in your area.
             </p>
             <div className="hero-actions">
               <a className="button button-secondary" href="#interest-list">
@@ -104,10 +107,13 @@ export function StudentsParentsPage() {
       <section className="section">
         <div className="section-heading">
           <p className="section-label">Program Overview</p>
-          <h2>What students can expect from Tech Pathways Initiative programs.</h2>
+          <h2>
+            What students can expect from Tech Pathways Initiative programs.
+          </h2>
           <p>
-            Programs are being designed with safety, access, and student experience as priorities.
-            Below is what families should know as pilots take shape.
+            Programs are being designed with safety, access, and student
+            experience as priorities. Below is what families should know as
+            pilots take shape.
           </p>
         </div>
         <div className="info-cards-grid">
@@ -121,36 +127,40 @@ export function StudentsParentsPage() {
           <article className="info-tile">
             <h3>Age and grade range</h3>
             <p>
-              Primarily grades 6 through 12 and early college students. Some programs may have
-              specific grade-level requirements depending on the track.
+              Primarily grades 6 through 12 and early college students. Some
+              programs may have specific grade-level requirements depending on
+              the track.
             </p>
           </article>
           <article className="info-tile">
             <h3>Program dates and locations</h3>
             <p>
-              Dates and partner site locations will be announced as pilot cohorts are confirmed.
-              Most programming is planned for Greater Cleveland.
+              Dates and partner site locations will be announced as pilot
+              cohorts are confirmed. Most programming is planned for Greater
+              Cleveland.
             </p>
           </article>
           <article className="info-tile">
             <h3>Safety and supervision</h3>
             <p>
-              All activities will be staffed by trained facilitators. Supervision practices will be
-              documented and shared with families before any program begins.
+              All activities will be staffed by trained facilitators.
+              Supervision practices will be documented and shared with families
+              before any program begins.
             </p>
           </article>
           <article className="info-tile">
             <h3>Transportation and technology</h3>
             <p>
-              Technology will be provided on-site during activities. Transportation guidance will
-              be included with each program's enrollment details.
+              Technology will be provided on-site during activities.
+              Transportation guidance will be included with each program's
+              enrollment details.
             </p>
           </article>
           <article className="info-tile">
             <h3>Cost to families</h3>
             <p>
-              All programs are planned to be free for eligible students. There will be no
-              participation fee required of families.
+              All programs are planned to be free for eligible students. There
+              will be no participation fee required of families.
             </p>
           </article>
         </div>
@@ -167,8 +177,8 @@ export function StudentsParentsPage() {
             <div>
               <h3>Join the interest list</h3>
               <p>
-                Add your student's name and your contact information so we can reach you when
-                enrollment opens near you.
+                Add your student's name and your contact information so we can
+                reach you when enrollment opens near you.
               </p>
             </div>
           </div>
@@ -177,8 +187,8 @@ export function StudentsParentsPage() {
             <div>
               <h3>Receive enrollment information</h3>
               <p>
-                You will receive details about the specific program, location, dates, and cohort
-                requirements before registration opens.
+                You will receive details about the specific program, location,
+                dates, and cohort requirements before registration opens.
               </p>
             </div>
           </div>
@@ -187,8 +197,9 @@ export function StudentsParentsPage() {
             <div>
               <h3>Complete registration and consent forms</h3>
               <p>
-                Registration will include contact information, grade level, and signed consent
-                forms covering photo and media permission and program participation.
+                Registration will include contact information, grade level, and
+                signed consent forms covering photo and media permission and
+                program participation.
               </p>
             </div>
           </div>
@@ -197,8 +208,9 @@ export function StudentsParentsPage() {
             <div>
               <h3>Attend orientation</h3>
               <p>
-                Families and students will be invited to an orientation before the program begins
-                so everyone understands expectations, schedules, and supervision practices.
+                Families and students will be invited to an orientation before
+                the program begins so everyone understands expectations,
+                schedules, and supervision practices.
               </p>
             </div>
           </div>
@@ -210,9 +222,10 @@ export function StudentsParentsPage() {
           <p className="section-label">Photo and Media Consent</p>
           <h2>We take student privacy and family consent seriously.</h2>
           <p>
-            No student will be photographed, recorded, or featured in any Tech Pathways Initiative
-            materials without prior written consent from a parent or guardian. Consent forms will be
-            included in every program's enrollment package and can be withdrawn at any time.
+            No student will be photographed, recorded, or featured in any Tech
+            Pathways Initiative materials without prior written consent from a
+            parent or guardian. Consent forms will be included in every
+            program's enrollment package and can be withdrawn at any time.
           </p>
         </div>
       </section>
@@ -220,7 +233,9 @@ export function StudentsParentsPage() {
       <section className="section section-soft">
         <div className="section-heading">
           <p className="section-label">Parent FAQs</p>
-          <h2>Common questions from families considering Tech Pathways Initiative.</h2>
+          <h2>
+            Common questions from families considering Tech Pathways Initiative.
+          </h2>
         </div>
         <div className="faq-list">
           {faqs.map((faq, index) => (
@@ -249,19 +264,39 @@ export function StudentsParentsPage() {
             <form className="interest-form" onSubmit={handleInterestSubmit}>
               <label>
                 Parent or Guardian Name
-                <input type="text" name="parent-name" placeholder="Your full name" required />
+                <input
+                  type="text"
+                  name="parent-name"
+                  placeholder="Your full name"
+                  required
+                />
               </label>
               <label>
                 Student First Name
-                <input type="text" name="student-name" placeholder="Student's first name" required />
+                <input
+                  type="text"
+                  name="student-name"
+                  placeholder="Student's first name"
+                  required
+                />
               </label>
               <label>
                 Student Grade Level
-                <input type="text" name="grade" placeholder="e.g. 7th grade or 10th grade" required />
+                <input
+                  type="text"
+                  name="grade"
+                  placeholder="e.g. 7th grade or 10th grade"
+                  required
+                />
               </label>
               <label>
                 Email Address
-                <input type="email" name="email" placeholder="you@example.com" required />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
               </label>
               <label>
                 Phone Number
@@ -272,7 +307,8 @@ export function StudentsParentsPage() {
               </button>
               {interestSubmitted && (
                 <p className="form-success" role="status">
-                  You are on the list. We will contact you when enrollment opens near you.
+                  You are on the list. We will contact you when enrollment opens
+                  near you.
                 </p>
               )}
             </form>
@@ -280,15 +316,27 @@ export function StudentsParentsPage() {
 
           <div id="program-updates" className="dual-form-panel">
             <p className="section-label">Program Updates</p>
-            <h2>Stay informed about new programs, dates, and cohort openings.</h2>
+            <h2>
+              Stay informed about new programs, dates, and cohort openings.
+            </h2>
             <form className="interest-form" onSubmit={handleUpdatesSubmit}>
               <label>
                 Full Name
-                <input type="text" name="updates-name" placeholder="Your name" required />
+                <input
+                  type="text"
+                  name="updates-name"
+                  placeholder="Your name"
+                  required
+                />
               </label>
               <label>
                 Email Address
-                <input type="email" name="updates-email" placeholder="you@example.com" required />
+                <input
+                  type="email"
+                  name="updates-email"
+                  placeholder="you@example.com"
+                  required
+                />
               </label>
               <label>
                 I am a
@@ -330,8 +378,8 @@ export function StudentsParentsPage() {
               <strong>Location:</strong> Greater Cleveland, Ohio
             </p>
             <p>
-              <strong>Response time:</strong> We aim to respond to all inquiries within 3 to 5
-              business days.
+              <strong>Response time:</strong> We aim to respond to all inquiries
+              within 3 to 5 business days.
             </p>
           </div>
         </div>
@@ -339,4 +387,3 @@ export function StudentsParentsPage() {
     </main>
   );
 }
-
