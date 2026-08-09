@@ -6,6 +6,7 @@ import { donationUrl } from "./donation";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
 import { GetInvolvedPage } from "./pages/GetInvolvedPage";
+import { GovernancePage } from "./pages/GovernancePage";
 import { HomePage } from "./pages/HomePage";
 import { ImpactPage } from "./pages/ImpactPage";
 import { NewsPage } from "./pages/NewsPage";
@@ -398,6 +399,7 @@ function AppShell() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/programs" element={<ProgramsPage />} />
         <Route path="/get-involved" element={<GetInvolvedPage />} />
+        <Route path="/governance" element={<GovernancePage />} />
         <Route path="/students-parents" element={<StudentsParentsPage />} />
         <Route path="/partners-sponsors" element={<PartnersSponsorsPage />} />
         <Route path="/impact" element={<ImpactPage />} />

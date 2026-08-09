@@ -9,9 +9,33 @@ import {
   founderBio,
   founderMessagePlaceholder,
   missionStatement,
-  transparencyItems,
   visionStatement,
 } from "../siteContent";
+
+const governanceDocuments = [
+  {
+   title: "Organizational Bylaws",
+   description:
+     "The bylaws establish the organization’s purpose, governance structure, board responsibilities, officer roles, financial oversight requirements, and decision-making procedures.",
+   buttonLabel: "View Organizational Bylaws",
+   to: "/governance#organizational-bylaws",
+  },
+  {
+   title: "Conflict of Interest Policy",
+   description:
+     "This policy helps directors, officers, employees, and key volunteers identify, disclose, and appropriately address actual or potential conflicts of interest.",
+   buttonLabel: "View Conflict of Interest Policy",
+   to: "/documents/Tech_Pathways_Initiative_Conflict_of_Interest_Policy.pdf",
+   external: true,
+  },
+  {
+   title: "Board Governance",
+   description:
+     "Tech Pathways Initiative’s Board of Directors provides strategic leadership, financial oversight, policy guidance, and accountability for the organization’s mission and resources.",
+   buttonLabel: "Learn About Our Governance",
+   to: "/governance#board-governance",
+  },
+];
 
 export function AboutPage() {
   return (
@@ -130,14 +154,33 @@ export function AboutPage() {
 
       <section className="section">
         <div className="section-heading">
-          <p className="section-label">Transparency</p>
-          <h2>Clear communication helps build trust with students, families, and supporters.</h2>
+          <p className="section-label">Governance &amp; Transparency</p>
+          <h2>Responsible leadership and clear communication build trust with students, families, partners, and communities.</h2>
+          <p>
+            Tech Pathways Initiative is committed to responsible governance, ethical leadership,
+            financial stewardship, and clear communication with the students, families, partners,
+            and communities we serve.
+          </p>
         </div>
-        <div className="transparency-grid">
-          {transparencyItems.map((item) => (
-            <article key={item.title} className="transparency-card">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+        <div className="governance-grid">
+          {governanceDocuments.map((document) => (
+            <article key={document.title} className="document-card">
+              <h3>{document.title}</h3>
+              <p>{document.description}</p>
+              {document.external ? (
+                <a
+                  className="button button-secondary"
+                  href={document.to}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {document.buttonLabel}
+                </a>
+              ) : (
+                <Link className="button button-secondary" to={document.to}>
+                  {document.buttonLabel}
+                </Link>
+              )}
             </article>
           ))}
         </div>
