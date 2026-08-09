@@ -9,7 +9,7 @@ export const primaryMissionStatement =
   "To empower youth in underserved communities through technology education, mentorship, career exposure, and workforce development opportunities that create pathways into high-paying technology careers.";
 
 export const missionStatement =
-  "Tech Pathways Initiative empowers youth in underserved Greater Cleveland communities through technology education, mentorship, career exposure, and workforce development-creating pathways to high-paying technology careers.";
+  "Tech Pathways Initiative empowers youth in underserved Greater Cleveland communities through technology education, mentorship, career exposure, and workforce development, creating pathways to high-paying technology careers.";
 export const heroCopy =
   "Tech Pathways Initiative equips youth in underserved Greater Cleveland communities with technical education, caring mentorship, career exposure, and professional skills that prepare them for rewarding careers in technology.";
 
@@ -340,7 +340,7 @@ export const aboutStory = [
 
 export const coreValues = [
   "Access",
-  "Representation",
+  "Accessibility",
   "Opportunity",
   "Innovation",
   "Mentorship",
@@ -408,6 +408,7 @@ export const founderMessagePlaceholder =
   "Personal founder's message coming soon. This space can later highlight Randy Chrisp's personal motivation, lived experience, and long-term vision for Tech Pathways Initiative.";
 
 export const aboutImage = volunteerCollaborationImage;
+
 
 
 

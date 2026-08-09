@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import codeBackdropImage from "../images/code-backdrop.jpg";
+import { donationUrl } from "../donation";
 import heroStemProjectImage from "../images/hero-stem-project.jpg";
 import volunteerCollaborationImage from "../images/volunteer-collaboration.jpg";
 import {
@@ -47,9 +48,14 @@ export function HomePage() {
               <Link className="button button-primary" to="/programs">
                 Explore Our Programs
               </Link>
-              <Link className="button button-secondary" to="/get-involved">
+              <a
+                className="button button-secondary"
+                href={donationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 Support the Mission
-              </Link>
+              </a>
             </div>
             <ul className="hero-highlights" aria-label="Organization priorities">
               <li>Technology education</li>

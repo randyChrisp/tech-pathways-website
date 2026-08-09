@@ -1,3 +1,5 @@
+import { donationUrl } from "../donation";
+
 const firstYearGoals = [
   {
     value: "50",
@@ -157,7 +159,12 @@ export function ImpactPage() {
             <a className="button button-primary" href="/get-involved">
               Get Involved
             </a>
-            <a className="button button-secondary" href="/#donate">
+            <a
+              className="button button-secondary"
+              href={donationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Support Financially
             </a>
           </div>
