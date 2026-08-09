@@ -2,6 +2,7 @@ import "./App.css";
 import { useEffect, useRef, useState } from "react";
 import { BrowserRouter, Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import logo from "./images/tech-pathways-initiative-logo-black-background.png";
+import { donationUrl } from "./donation";
 import { AboutPage } from "./pages/AboutPage";
 import { ContactPage } from "./pages/ContactPage";
 import { GetInvolvedPage } from "./pages/GetInvolvedPage";
@@ -309,7 +310,7 @@ function SiteHeader() {
           )}
         </div>
 
-        <a className="nav-donate" href="/#donate">
+        <a className="nav-donate" href={donationUrl} target="_blank" rel="noopener noreferrer">
           Donate
         </a>
       </nav>

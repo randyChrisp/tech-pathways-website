@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { donationUrl } from "../donation";
 import {
   aboutImage,
   aboutStory,
@@ -149,7 +150,12 @@ export function AboutPage() {
             <h2>Learn more about the mission and help shape what comes next.</h2>
           </div>
           <div className="cta-actions">
-            <a className="button button-primary" href="/#donate">
+            <a
+              className="button button-primary"
+              href={donationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Support the Mission
             </a>
             <Link className="button button-secondary" to="/">
