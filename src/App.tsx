@@ -215,9 +215,17 @@ function ScrollToTop() {
   const location = useLocation();
 
   useEffect(() => {
-    if (!location.hash) {
-      window.scrollTo({ top: 0, behavior: "instant" });
+    if (location.hash) {
+      const targetId = location.hash.slice(1);
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ block: "start" });
+        return;
+      }
     }
+
+    window.scrollTo({ top: 0, behavior: "instant" });
   }, [location.pathname, location.hash]);
 
   return null;
