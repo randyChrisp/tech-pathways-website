@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import codeBackdropImage from "../images/code-backdrop.jpg";
 import { donationUrl } from "../donation";
 import heroStemProjectImage from "../images/hero-stem-project.jpg";
-import volunteerCollaborationImage from "../images/volunteer-collaboration.jpg";
+import donateFigureImage from "../images/pexels-cottonbro-6986443.jpg";
 import {
   featuredPrograms,
   getInvolvedOptions,
@@ -228,7 +228,7 @@ export function HomePage() {
             </p>
             <figure className="donate-figure">
               <img
-                src={volunteerCollaborationImage}
+                src={donateFigureImage}
                 alt="Technology professionals working together at a table with laptops."
               />
               <figcaption>
