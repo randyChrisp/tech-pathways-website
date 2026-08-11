@@ -18,7 +18,7 @@ const governanceDocuments = [
    description:
      "The bylaws establish the organization’s purpose, governance structure, board responsibilities, officer roles, financial oversight requirements, and decision-making procedures.",
    buttonLabel: "View Organizational Bylaws",
-   to: "/governance#organizational-bylaws",
+   to: "/governance",
   },
   {
    title: "Conflict of Interest Policy",
@@ -33,7 +33,7 @@ const governanceDocuments = [
    description:
      "Tech Pathways Initiative’s Board of Directors provides strategic leadership, financial oversight, policy guidance, and accountability for the organization’s mission and resources.",
    buttonLabel: "Learn About Our Governance",
-   to: "/governance#board-governance",
+   to: "/governance",
   },
 ];
 

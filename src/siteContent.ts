@@ -1,8 +1,10 @@
 import careerPathwaysImage from "./images/career-pathways.jpg";
 import codingOfficeImage from "./images/it-careers-office.jpg";
 import exposureImage from "./images/exposure-section.jpg";
-import heroStemProjectImage from "./images/hero-stem-project.jpg";
 import mentorshipCardImage from "./images/mentorship-card.jpg";
+import programCardImage from "./images/pexels-katerina-holmes-5905700.jpg";
+import programMentorshipImage from "./images/pexels-ryutaro-5745576.jpg";
+import storyImage from "./images/pexels-ron-lach-10638069.jpg";
 import volunteerCollaborationImage from "./images/volunteer-collaboration.jpg";
 
 export const primaryMissionStatement =
@@ -30,7 +32,7 @@ export const pathwaySteps = [
     title: "Hands-on workshops build practical skills.",
     description:
       "Hands-on workshops help students build digital literacy, coding, problem-solving, teamwork, and project-development skills.",
-    image: heroStemProjectImage,
+    image: storyImage,
     alt: "Children collaborating on a STEM project with a laptop and 3D printer.",
   },
   {
@@ -56,14 +58,14 @@ export const featuredPrograms = [
     title: "Tech Discovery",
     description:
       "Planned introductory experiences to expose students to technology careers through demonstrations and guest speakers.",
-    image: exposureImage,
+    image: programCardImage,
     alt: "Students collaborating on a hands-on technology project.",
   },
   {
     title: "Digital Foundations",
     description:
       "Planned digital literacy pathway focused on computer basics, online safety, and productivity tools.",
-    image: mentorshipCardImage,
+    image: programMentorshipImage,
     alt: "An adult mentor helping two students with their work at a table.",
   },
   {
