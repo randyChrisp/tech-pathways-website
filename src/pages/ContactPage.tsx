@@ -17,18 +17,18 @@ const contactReasons = [
 const socialLinks = [
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/company/techpathwaysinitiative",
-    handle: "@techpathwaysinitiative",
-  },
-  {
-    label: "Instagram",
-    href: "https://instagram.com/techpathwaysinitiative",
+    href: "https://www.linkedin.com/company/tech-pathways-initiaitve",
     handle: "@techpathwaysinitiative",
   },
   {
     label: "Facebook",
-    href: "https://facebook.com/techpathwaysinitiative",
+    href: "https://www.facebook.com/profile.php?id=61593123514261",
     handle: "Tech Pathways Initiative",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/tech_pathways_initiative/",
+    handle: "@techpathwaysinitiative",
   },
   {
     label: "X (Twitter)",

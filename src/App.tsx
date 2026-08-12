@@ -85,9 +85,9 @@ const organizationSchema = {
   },
   areaServed: ["Cleveland", "Greater Cleveland", "Northeast Ohio"],
   sameAs: [
-    "https://linkedin.com/company/techpathwaysinitiative",
-    "https://instagram.com/techpathwaysinitiative",
-    "https://facebook.com/techpathwaysinitiative",
+    "https://www.linkedin.com/company/tech-pathways-initiaitve",
+    "https://www.facebook.com/profile.php?id=61593123514261",
+    "https://www.instagram.com/tech_pathways_initiative/",
     "https://twitter.com/techpathwaysinit",
   ],
 };
@@ -370,9 +370,9 @@ function SiteFooter() {
 
           <h3>Social Links</h3>
           <ul>
-            <li><a href="https://linkedin.com/company/techpathwaysinitiative" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://instagram.com/techpathwaysinitiative" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-            <li><a href="https://facebook.com/techpathwaysinitiative" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.linkedin.com/company/tech-pathways-initiaitve" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61593123514261" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://www.instagram.com/tech_pathways_initiative/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
             <li><a href="https://twitter.com/techpathwaysinit" target="_blank" rel="noopener noreferrer">X (Twitter)</a></li>
           </ul>
 
@@ -429,6 +429,5 @@ function App() {
 }
 
 export default App;
-
 
 
