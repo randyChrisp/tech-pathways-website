@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { sendFormAsEmail } from "../formEmail";
 
 const contactReasons = [
   { value: "", label: "Select a reason for contact" },
@@ -42,6 +43,7 @@ export function ContactPage() {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    sendFormAsEmail("Contact Form", event);
     setSubmitted(true);
     event.currentTarget.reset();
   };

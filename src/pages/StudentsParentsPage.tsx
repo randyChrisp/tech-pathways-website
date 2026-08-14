@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { sendFormAsEmail } from "../formEmail";
 
 const faqs = [
   {
@@ -60,12 +61,14 @@ export function StudentsParentsPage() {
 
   const handleInterestSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    sendFormAsEmail("Student Interest Form", event);
     setInterestSubmitted(true);
     event.currentTarget.reset();
   };
 
   const handleUpdatesSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    sendFormAsEmail("Program Updates Signup", event);
     setUpdatesSubmitted(true);
     event.currentTarget.reset();
   };

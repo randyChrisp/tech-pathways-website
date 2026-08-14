@@ -2,6 +2,7 @@ import { useState, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import codeBackdropImage from "../images/code-backdrop.jpg";
 import { donationUrl } from "../donation";
+import { sendFormAsEmail } from "../formEmail";
 import heroStemProjectImage from "../images/hero-stem-project.jpg";
 import donateFigureImage from "../images/pexels-cottonbro-6986443.jpg";
 import {
@@ -26,12 +27,14 @@ export function HomePage() {
 
   const handleDonationSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    sendFormAsEmail("Donation Interest", event);
     setDonationSubmitted(true);
     event.currentTarget.reset();
   };
 
   const handleNewsletterSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    sendFormAsEmail("Newsletter Signup", event);
     setNewsletterSubmitted(true);
     event.currentTarget.reset();
   };

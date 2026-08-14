@@ -148,12 +148,14 @@ export function NewsPage() {
 }
 
 import { useState, type FormEvent } from "react";
+import { sendFormAsEmail } from "../formEmail";
 
 function NewsSubscribeForm() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    sendFormAsEmail("Newsletter Subscription", event);
     setSubmitted(true);
     event.currentTarget.reset();
   };
