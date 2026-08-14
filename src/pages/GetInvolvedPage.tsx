@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import { sendFormAsEmail } from "../formEmail";
 import { getInvolvedOptions } from "../siteContent";
 
 export function GetInvolvedPage() {
@@ -7,6 +8,7 @@ export function GetInvolvedPage() {
   const handleInterestSubmit =
     (optionId: string) => (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
+      sendFormAsEmail(`${optionId} Interest Form`, event);
       setSubmittedOptions((current) => ({ ...current, [optionId]: true }));
       event.currentTarget.reset();
     };
