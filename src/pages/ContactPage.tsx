@@ -1,6 +1,8 @@
 import { useState, type FormEvent } from "react";
 import { sendFormAsEmail } from "../formEmail";
 
+type SubmitState = "idle" | "submitting" | "done" | "error";
+
 const contactReasons = [
   { value: "", label: "Select a reason for contact" },
   { value: "student-parent", label: "Student or parent interest" },
@@ -39,13 +41,19 @@ const socialLinks = [
 ];
 
 export function ContactPage() {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitState, setSubmitState] = useState<SubmitState>("idle");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendFormAsEmail("Contact Form", event);
-    setSubmitted(true);
-    event.currentTarget.reset();
+    setSubmitState("submitting");
+    const form = event.currentTarget;
+    try {
+      await sendFormAsEmail("Contact Form", event);
+      setSubmitState("done");
+      form.reset();
+    } catch {
+      setSubmitState("error");
+    }
   };
 
   return (
@@ -125,13 +133,19 @@ export function ContactPage() {
                   required
                 />
               </label>
-              <button className="button button-primary" type="submit">
-                Send Message
+              <button className="button button-primary" type="submit" disabled={submitState === "submitting"}>
+                {submitState === "submitting" ? "Sending…" : "Send Message"}
               </button>
-              {submitted && (
+              {submitState === "done" && (
                 <p className="form-success" role="status">
                   Thank you for reaching out. We will respond within 3 to 5
                   business days.
+                </p>
+              )}
+              {submitState === "error" && (
+                <p className="form-error" role="alert">
+                  Something went wrong. Please try again or email us directly at{" "}
+                  <a href="mailto:info@techpathwaysinitiative.org">info@techpathwaysinitiative.org</a>.
                 </p>
               )}
             </form>

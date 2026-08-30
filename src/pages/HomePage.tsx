@@ -22,21 +22,33 @@ const featuredProgramIcons: Record<string, string> = {
 };
 
 export function HomePage() {
-  const [donationSubmitted, setDonationSubmitted] = useState(false);
-  const [newsletterSubmitted, setNewsletterSubmitted] = useState(false);
+  const [donationState, setDonationState] = useState<"idle" | "submitting" | "done" | "error">("idle");
+  const [newsletterState, setNewsletterState] = useState<"idle" | "submitting" | "done" | "error">("idle");
 
-  const handleDonationSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleDonationSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendFormAsEmail("Donation Interest", event);
-    setDonationSubmitted(true);
-    event.currentTarget.reset();
+    setDonationState("submitting");
+    const form = event.currentTarget;
+    try {
+      await sendFormAsEmail("Donation Interest", event);
+      setDonationState("done");
+      form.reset();
+    } catch {
+      setDonationState("error");
+    }
   };
 
-  const handleNewsletterSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleNewsletterSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendFormAsEmail("Newsletter Signup", event);
-    setNewsletterSubmitted(true);
-    event.currentTarget.reset();
+    setNewsletterState("submitting");
+    const form = event.currentTarget;
+    try {
+      await sendFormAsEmail("Newsletter Signup", event);
+      setNewsletterState("done");
+      form.reset();
+    } catch {
+      setNewsletterState("error");
+    }
   };
 
   return (
@@ -262,12 +274,18 @@ export function HomePage() {
                 placeholder="Share why this mission matters to you."
               />
             </label>
-            <button className="button button-primary" type="submit">
-              Submit Donation Interest
+            <button className="button button-primary" type="submit" disabled={donationState === "submitting"}>
+              {donationState === "submitting" ? "Sending…" : "Submit Donation Interest"}
             </button>
-            {donationSubmitted && (
+            {donationState === "done" && (
               <p className="form-success" role="status">
                 Thank you! We received your donation interest and will follow up shortly.
+              </p>
+            )}
+            {donationState === "error" && (
+              <p className="form-error" role="alert">
+                Something went wrong. Please try again or email{" "}
+                <a href="mailto:info@techpathwaysinitiative.org">info@techpathwaysinitiative.org</a>.
               </p>
             )}
           </form>
@@ -291,12 +309,18 @@ export function HomePage() {
               placeholder="you@example.com"
               required
             />
-            <button className="button button-primary" type="submit">
-              Subscribe
+            <button className="button button-primary" type="submit" disabled={newsletterState === "submitting"}>
+              {newsletterState === "submitting" ? "Sending…" : "Subscribe"}
             </button>
-            {newsletterSubmitted && (
+            {newsletterState === "done" && (
               <p className="form-success" role="status">
                 Thanks for subscribing! We will keep you updated.
+              </p>
+            )}
+            {newsletterState === "error" && (
+              <p className="form-error" role="alert">
+                Something went wrong. Please try again or email{" "}
+                <a href="mailto:info@techpathwaysinitiative.org">info@techpathwaysinitiative.org</a>.
               </p>
             )}
           </form>
