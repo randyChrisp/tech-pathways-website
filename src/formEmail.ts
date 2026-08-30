@@ -41,6 +41,13 @@ export async function sendFormAsEmail(
   });
 
   if (!response.ok) {
-    throw new Error("Your form could not be submitted. Please try again.");
+    let detail = "";
+    try {
+      const errBody = await response.json() as { error?: string; detail?: string };
+      detail = errBody.detail || errBody.error || "";
+    } catch {
+      detail = await response.text().catch(() => "");
+    }
+    throw new Error(`Form submission failed (${response.status})${detail ? ": " + detail : ""}`);
   }
 }

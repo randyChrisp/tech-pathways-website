@@ -1,25 +1,3 @@
-export class MyWorkFlow {
-	constructor(state, env) {
-		this.state = state;
-		this.env = env;
-	}
-
-	async fetch(request) {
-		return new Response('MyWorkFlow is running', { status: 200 });
-	}
-}
-
-export class WorkflowStatusDO {
-	constructor(state, env) {
-		this.state = state;
-		this.env = env;
-	}
-
-	async fetch(request) {
-		return new Response('WorkflowStatusDO is running', { status: 200 });
-	}
-}
-
 export default {
 	async fetch(request, env) {
 		const requestOrigin = request.headers.get('Origin') || '*';
@@ -73,12 +51,20 @@ export default {
 			body: JSON.stringify(body),
 		});
 
+		const paBody = await paRes.text();
+
 		if (!paRes.ok) {
-			const err = await paRes.text();
-			return new Response(`Workflow failed: ${err}`, {
-				status: 500,
-				headers: corsHeaders(requestOrigin),
-			});
+			console.error(`PA_WORKFLOW responded ${paRes.status}: ${paBody}`);
+			return new Response(
+				JSON.stringify({ error: `Workflow failed (${paRes.status})`, detail: paBody }),
+				{
+					status: 500,
+					headers: {
+						'Content-Type': 'application/json',
+						...corsHeaders(requestOrigin),
+					},
+				}
+			);
 		}
 
 		return new Response(JSON.stringify({ success: true }), {
