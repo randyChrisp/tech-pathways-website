@@ -55,22 +55,34 @@ const faqs = [
 ];
 
 export function StudentsParentsPage() {
-  const [interestSubmitted, setInterestSubmitted] = useState(false);
-  const [updatesSubmitted, setUpdatesSubmitted] = useState(false);
+  const [interestState, setInterestState] = useState<"idle" | "submitting" | "done" | "error">("idle");
+  const [updatesState, setUpdatesState] = useState<"idle" | "submitting" | "done" | "error">("idle");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
-  const handleInterestSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleInterestSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendFormAsEmail("Student Interest Form", event);
-    setInterestSubmitted(true);
-    event.currentTarget.reset();
+    setInterestState("submitting");
+    const form = event.currentTarget;
+    try {
+      await sendFormAsEmail("Student Interest Form", event);
+      setInterestState("done");
+      form.reset();
+    } catch {
+      setInterestState("error");
+    }
   };
 
-  const handleUpdatesSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleUpdatesSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendFormAsEmail("Program Updates Signup", event);
-    setUpdatesSubmitted(true);
-    event.currentTarget.reset();
+    setUpdatesState("submitting");
+    const form = event.currentTarget;
+    try {
+      await sendFormAsEmail("Program Updates Signup", event);
+      setUpdatesState("done");
+      form.reset();
+    } catch {
+      setUpdatesState("error");
+    }
   };
 
   return (
@@ -305,13 +317,19 @@ export function StudentsParentsPage() {
                 Phone Number
                 <input type="tel" name="phone" placeholder="Optional" />
               </label>
-              <button className="button button-primary" type="submit">
-                Join the Student Interest List
+              <button className="button button-primary" type="submit" disabled={interestState === "submitting"}>
+                {interestState === "submitting" ? "Sending…" : "Join the Student Interest List"}
               </button>
-              {interestSubmitted && (
+              {interestState === "done" && (
                 <p className="form-success" role="status">
                   You are on the list. We will contact you when enrollment opens
                   near you.
+                </p>
+              )}
+              {interestState === "error" && (
+                <p className="form-error" role="alert">
+                  Something went wrong. Please try again or email{" "}
+                  <a href="mailto:info@techpathwaysinitiative.org">info@techpathwaysinitiative.org</a>.
                 </p>
               )}
             </form>
@@ -351,12 +369,18 @@ export function StudentsParentsPage() {
                   <option value="community">Community Member</option>
                 </select>
               </label>
-              <button className="button button-primary" type="submit">
-                Receive Program Updates
+              <button className="button button-primary" type="submit" disabled={updatesState === "submitting"}>
+                {updatesState === "submitting" ? "Sending…" : "Receive Program Updates"}
               </button>
-              {updatesSubmitted && (
+              {updatesState === "done" && (
                 <p className="form-success" role="status">
                   You are subscribed. We will keep you updated on program news.
+                </p>
+              )}
+              {updatesState === "error" && (
+                <p className="form-error" role="alert">
+                  Something went wrong. Please try again or email{" "}
+                  <a href="mailto:info@techpathwaysinitiative.org">info@techpathwaysinitiative.org</a>.
                 </p>
               )}
             </form>

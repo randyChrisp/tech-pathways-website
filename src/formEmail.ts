@@ -1,6 +1,6 @@
 import type { FormEvent } from "react";
 
-export const formInboxEmail = "info@techpathwaysinitiative.org";
+const workerUrl = import.meta.env.VITE_CF_WORKER_URL as string;
 
 function formatFieldName(name: string) {
   const cleaned = name
@@ -15,30 +15,39 @@ function formatFieldName(name: string) {
   return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
 }
 
-export function sendFormAsEmail(formName: string, event: FormEvent<HTMLFormElement>) {
+export async function sendFormAsEmail(
+  formName: string,
+  event: FormEvent<HTMLFormElement>
+): Promise<void> {
   const formData = new FormData(event.currentTarget);
-  const entries = Array.from(formData.entries())
-    .filter(([, value]) => typeof value === "string" && value.trim().length > 0)
-    .map(([name, value]) => ({
-      label: formatFieldName(String(name)),
-      value: String(value).trim(),
-    }));
+  const fields: Record<string, string> = {};
 
-  const bodyLines = [
-    `Hello Tech Pathways Initiative,`,
-    "",
-    `A new ${formName} submission was received.`,
-    "",
-    ...entries.map(({ label, value }) => `${label}: ${value}`),
-    "",
-    `Submitted at: ${new Date().toLocaleString()}`,
-    "",
-    "Best regards,",
-    "Tech Pathways Initiative website",
-  ];
+  for (const [name, value] of formData.entries()) {
+    if (typeof value === "string" && value.trim().length > 0) {
+      fields[formatFieldName(name)] = value.trim();
+    }
+  }
 
-  const subject = encodeURIComponent(`${formName} Submission`);
-  const body = encodeURIComponent(bodyLines.join("\n"));
+  const payload = {
+    formName,
+    submittedAt: new Date().toLocaleString(),
+    fields,
+  };
 
-  window.location.href = `mailto:${formInboxEmail}?subject=${subject}&body=${body}`;
+  const response = await fetch(workerUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!response.ok) {
+    let detail = "";
+    try {
+      const errBody = await response.json() as { error?: string; detail?: string };
+      detail = errBody.detail || errBody.error || "";
+    } catch {
+      detail = await response.text().catch(() => "");
+    }
+    throw new Error(`Form submission failed (${response.status})${detail ? ": " + detail : ""}`);
+  }
 }

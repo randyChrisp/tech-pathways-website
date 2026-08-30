@@ -4,13 +4,23 @@ import { getInvolvedOptions } from "../siteContent";
 
 export function GetInvolvedPage() {
   const [submittedOptions, setSubmittedOptions] = useState<Record<string, boolean>>({});
+  const [errorOptions, setErrorOptions] = useState<Record<string, boolean>>({});
+  const [submittingOptions, setSubmittingOptions] = useState<Record<string, boolean>>({});
 
   const handleInterestSubmit =
-    (optionId: string) => (event: FormEvent<HTMLFormElement>) => {
+    (optionId: string) => async (event: FormEvent<HTMLFormElement>) => {
       event.preventDefault();
-      sendFormAsEmail(`${optionId} Interest Form`, event);
-      setSubmittedOptions((current) => ({ ...current, [optionId]: true }));
-      event.currentTarget.reset();
+      const form = event.currentTarget;
+      setSubmittingOptions((c) => ({ ...c, [optionId]: true }));
+      try {
+        await sendFormAsEmail(`${optionId} Interest Form`, event);
+        setSubmittedOptions((c) => ({ ...c, [optionId]: true }));
+        form.reset();
+      } catch {
+        setErrorOptions((c) => ({ ...c, [optionId]: true }));
+      } finally {
+        setSubmittingOptions((c) => ({ ...c, [optionId]: false }));
+      }
     };
 
   return (
@@ -81,12 +91,18 @@ export function GetInvolvedPage() {
                     required
                   />
                 </label>
-                <button className="button button-primary" type="submit">
-                  {option.submitLabel}
+                <button className="button button-primary" type="submit" disabled={submittingOptions[option.id]}>
+                  {submittingOptions[option.id] ? "Sending…" : option.submitLabel}
                 </button>
                 {submittedOptions[option.id] && (
                   <p className="form-success" role="status">
                     Thank you! We received your interest and will follow up soon.
+                  </p>
+                )}
+                {errorOptions[option.id] && (
+                  <p className="form-error" role="alert">
+                    Something went wrong. Please try again or email{" "}
+                    <a href="mailto:info@techpathwaysinitiative.org">info@techpathwaysinitiative.org</a>.
                   </p>
                 )}
               </form>

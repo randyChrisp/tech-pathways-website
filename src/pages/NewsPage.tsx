@@ -151,13 +151,19 @@ import { useState, type FormEvent } from "react";
 import { sendFormAsEmail } from "../formEmail";
 
 function NewsSubscribeForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [submitState, setSubmitState] = useState<"idle" | "submitting" | "done" | "error">("idle");
 
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    sendFormAsEmail("Newsletter Subscription", event);
-    setSubmitted(true);
-    event.currentTarget.reset();
+    setSubmitState("submitting");
+    const form = event.currentTarget;
+    try {
+      await sendFormAsEmail("Newsletter Subscription", event);
+      setSubmitState("done");
+      form.reset();
+    } catch {
+      setSubmitState("error");
+    }
   };
 
   return (
@@ -185,12 +191,18 @@ function NewsSubscribeForm() {
           <option value="all">All updates</option>
         </select>
       </label>
-      <button className="button button-primary" type="submit">
-        Subscribe
+      <button className="button button-primary" type="submit" disabled={submitState === "submitting"}>
+        {submitState === "submitting" ? "Sending…" : "Subscribe"}
       </button>
-      {submitted && (
+      {submitState === "done" && (
         <p className="form-success" role="status">
           You are subscribed. We will notify you when new content is published.
+        </p>
+      )}
+      {submitState === "error" && (
+        <p className="form-error" role="alert">
+          Something went wrong. Please try again or email{" "}
+          <a href="mailto:info@techpathwaysinitiative.org">info@techpathwaysinitiative.org</a>.
         </p>
       )}
     </form>

@@ -1,0 +1,15 @@
+{
+  "name": "tech-pathways-form-handler",
+  "main": "src/index.js",
+  "workers_dev": true,
+  "compatibility_date": "2025-10-08",
+  "durable_objects": {
+    "bindings": []
+  },
+  "migrations": [
+    {
+      "tag": "remove-durable-objects",
+      "deleted_classes": ["WorkflowStatusDO"]
+    }
+  ]
+}
