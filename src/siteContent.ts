@@ -87,19 +87,22 @@ export const impactGoals = [
 export const participationWays = [
   {
     title: "Volunteer",
-    description: "Lead workshops, tutor students, or support events that expand access to technology.",
+    description:
+      "Lead workshops, tutor students, or support events that expand access to technology.",
     cta: "Volunteer Interest",
     href: "mailto:info@techpathwaysinitiative.org?subject=Volunteer%20Interest",
   },
   {
     title: "Mentor",
-    description: "Share your story and guidance to help students build confidence in tech pathways.",
+    description:
+      "Share your story and guidance to help students build confidence in tech pathways.",
     cta: "Become a Mentor",
     href: "mailto:info@techpathwaysinitiative.org?subject=Mentor%20Application",
   },
   {
     title: "Partner",
-    description: "Collaborate as a school, employer, or community organization to deepen student impact.",
+    description:
+      "Collaborate as a school, employer, or community organization to deepen student impact.",
     cta: "Partner With Us",
     href: "mailto:info@techpathwaysinitiative.org?subject=Partnership%20Inquiry",
   },
@@ -221,77 +224,102 @@ export type ProgramDevelopmentDetail = {
 
 export const programsInDevelopment: ProgramDevelopmentDetail[] = [
   {
-    name: "Tech Discovery",
-    purpose: "Introduce students to technology careers.",
-    possibleActivities: "Career demonstrations, guest speakers, workplace tours.",
-    targetGroup: "Middle and high school students beginning their technology journey.",
-    schedule: "Planned as after-school sessions and Saturday events in pilot cycles.",
+    name: "IT Career Exploration",
+    purpose:
+      "Introduce students to the wide range of career opportunities available in information technology.",
+    possibleActivities:
+      "Hands-on technology demonstrations, career discussions, guest speakers, workplace scenarios, group projects, and exploration of IT certifications and education pathways.",
+    targetGroup:
+      "Students in grades 6–8 who are curious about technology careers. No previous technical experience is required.",
+    schedule:
+      "Planned as a semester-long course meeting once each week at a partner school or community organization.",
     expectedOutcomes:
-      "Students can identify technology career pathways and understand how school skills connect to those pathways.",
+      "Students identify several IT career pathways, understand the education and skills associated with them, practice basic technical and workplace skills, and create an individualized IT career roadmap.",
     participationInstructions:
-      "Schools and organizations can request pilot participation by emailing the Tech Pathways team.",
-    eligibility: "Youth in underserved Greater Cleveland communities through partner schools and organizations.",
+      "Schools and youth-serving organizations can contact Tech Pathways Initiative to discuss hosting a pilot course.",
+    eligibility:
+      "Middle school students participating through partner schools and community organizations in Greater Cleveland.",
     studentLearning:
-      "Career awareness, technology vocabulary, and confidence discussing future opportunities.",
-    duration: "Planned 6 to 8 week pilot cycle.",
+      "Computer hardware and software, networking, cybersecurity, cloud computing, software development, data and artificial intelligence, technical support, professional communication, teamwork, and problem-solving.",
+    duration:
+      "Planned as a 14–18-week semester course with one instructional session per week.",
     freeOrPaid: "Planned as a free program for participating students.",
-    location: "Partner school sites, community spaces, and selected workplace visit locations.",
+    location:
+      "Partner schools, community learning centers, and approved youth-serving organizations.",
     technologyProvided:
-      "Demonstration equipment and guided access to devices during program activities.",
+      "Program laptops, demonstration equipment, instructional software, and supervised access to online learning resources will be provided during course activities.",
     parentRegistration:
-      "Parent or guardian registration process will open after pilot partner schedules are confirmed.",
-    nextCohort: "Programs in Development. Pilot start dates to be announced.",
+      "Parent or guardian registration and consent information will be available after a pilot site and course schedule are confirmed.",
+    nextCohort:
+      "Program in development. Pilot dates will be announced after a school or community partner is confirmed.",
+  },
+  {
+    name: "Full-Stack Web Development",
+    purpose:
+      "Teach students how to design, build, and present complete web applications using both front-end and back-end technologies.",
+    possibleActivities:
+      "HTML, CSS, JavaScript, responsive design, React, APIs, server-side programming, databases, Git and GitHub, debugging, collaborative coding, and portfolio development.",
+    targetGroup:
+      "High school students interested in coding, web design, software development, and project-based learning. No previous programming experience is required.",
+    schedule:
+      "Planned as a school-year course meeting once each week for approximately 90 minutes.",
+    expectedOutcomes:
+      "Students build a personal portfolio website and a functional full-stack web application while developing foundational programming, problem-solving, collaboration, and presentation skills.",
+    participationInstructions:
+      "High schools and youth-serving organizations can contact Tech Pathways Initiative to explore hosting a pilot cohort.",
+    eligibility:
+      "High school students participating through approved partner schools and community organizations in Greater Cleveland.",
+    studentLearning:
+      "Front-end development with HTML, CSS, JavaScript, and React; back-end development using server-side programming and REST APIs; database fundamentals; version control with Git and GitHub; application testing, deployment, cybersecurity basics, and professional portfolio preparation.",
+    duration:
+      "Planned as a full academic-year course with weekly 90-minute instructional sessions.",
+    freeOrPaid:
+      "Planned as a free instructional program for participating students.",
+    location:
+      "Partner high schools, community technology labs, and approved youth-serving organizations.",
+    technologyProvided:
+      "Students will receive access to laptops, development software, coding platforms, databases, and guided deployment tools during instructional sessions.",
+    parentRegistration:
+      "Family registration and consent information will be shared after host locations and cohort schedules are finalized.",
+    nextCohort:
+      "Program in development. Cohort dates will be announced after pilot partners and host sites are confirmed.",
   },
   {
     name: "Digital Foundations",
     purpose: "Build essential technical skills.",
-    possibleActivities: "Computer literacy, internet safety, productivity tools.",
-    targetGroup: "Upper elementary through high school students needing foundational digital skills.",
-    schedule: "Planned as weekly classroom-style workshops in partner locations.",
+    possibleActivities:
+      "Computer literacy, internet safety, productivity tools.",
+    targetGroup:
+      "Upper elementary through high school students needing foundational digital skills.",
+    schedule:
+      "Planned as weekly classroom-style workshops in partner locations.",
     expectedOutcomes:
       "Students strengthen digital confidence and build practical day-to-day technology skills.",
     participationInstructions:
       "Community organizations and schools can join the pilot interest list for launch planning.",
-    eligibility: "Youth participants referred through schools, families, and community partners.",
+    eligibility:
+      "Youth participants referred through schools, families, and community partners.",
     studentLearning:
       "Computer basics, online safety habits, productivity tools, and digital communication skills.",
     duration: "Planned 8 to 10 week learning track.",
     freeOrPaid: "Planned as a free program for families.",
-    location: "School labs, community learning centers, and approved partner sites.",
-    technologyProvided: "Program devices, instructional software, and supervised internet access.",
+    location:
+      "School labs, community learning centers, and approved partner sites.",
+    technologyProvided:
+      "Program devices, instructional software, and supervised internet access.",
     parentRegistration:
       "Registration details will be released with pilot partner announcements and program calendars.",
-    nextCohort: "Programs in Development. Pilot launch timeline pending partner onboarding.",
-  },
-  {
-    name: "Code Forward",
-    purpose: "Teach software development fundamentals.",
-    possibleActivities: "HTML, CSS, JavaScript, app and website projects.",
-    targetGroup: "Middle and high school students interested in coding and project-based learning.",
-    schedule: "Planned as semester-style cohorts with weekly sessions and project showcases.",
-    expectedOutcomes:
-      "Students build foundational coding skills and complete portfolio-ready web and app projects.",
-    participationInstructions:
-      "Schools and youth organizations can apply to host pilot cohorts in collaboration with Tech Pathways.",
-    eligibility:
-      "Students in target age groups who are ready for beginner-level coding instruction and support.",
-    studentLearning:
-      "Front-end coding basics, problem solving, project collaboration, and presentation skills.",
-    duration: "Planned 10 to 12 week cohort model.",
-    freeOrPaid: "Planned as a free instructional pathway for accepted students.",
-    location: "Partner classrooms, innovation labs, and approved community technology spaces.",
-    technologyProvided:
-      "Laptop access, coding platforms, and guided project tools during instructional sessions.",
-    parentRegistration:
-      "Family registration information will be shared once pilot cohorts and host sites are confirmed.",
-    nextCohort: "Programs in Development. Cohort dates will be posted after pilot setup.",
+    nextCohort:
+      "Programs in Development. Pilot launch timeline pending partner onboarding.",
   },
   {
     name: "Pathways Mentoring",
     purpose: "Connect students with technology professionals.",
     possibleActivities: "Monthly mentoring, goal-setting, career guidance.",
-    targetGroup: "Middle school, high school, and early postsecondary students seeking guidance.",
-    schedule: "Planned as recurring monthly mentoring sessions with ongoing check-ins.",
+    targetGroup:
+      "Middle school, high school, and early postsecondary students seeking guidance.",
+    schedule:
+      "Planned as recurring monthly mentoring sessions with ongoing check-ins.",
     expectedOutcomes:
       "Students gain support networks, clearer goals, and stronger confidence navigating education and career decisions.",
     participationInstructions:
@@ -300,21 +328,27 @@ export const programsInDevelopment: ProgramDevelopmentDetail[] = [
       "Students referred through partner schools and organizations, matched based on goals and interests.",
     studentLearning:
       "Goal-setting habits, professional communication, and understanding of technology career pathways.",
-    duration: "Planned as a multi-month mentorship cycle with periodic milestone reviews.",
+    duration:
+      "Planned as a multi-month mentorship cycle with periodic milestone reviews.",
     freeOrPaid: "Planned as a free mentorship offering.",
-    location: "Hybrid model under development, including in-person partner sites and virtual meetings.",
-    technologyProvided: "Program-supported communication tools and shared learning resources.",
+    location:
+      "Hybrid model under development, including in-person partner sites and virtual meetings.",
+    technologyProvided:
+      "Program-supported communication tools and shared learning resources.",
     parentRegistration:
       "Parent and guardian consent workflow will be included when pilot implementation details are finalized.",
-    nextCohort: "Programs in Development. Pilot mentor matching timeline to be announced.",
+    nextCohort:
+      "Programs in Development. Pilot mentor matching timeline to be announced.",
   },
   {
     name: "Career Launch",
     purpose: "Prepare older students for employment.",
-    possibleActivities: "Resumes, interviews, portfolios, internships, certifications.",
+    possibleActivities:
+      "Resumes, interviews, portfolios, internships, certifications.",
     targetGroup:
       "High school juniors, seniors, and early postsecondary learners preparing for workforce entry.",
-    schedule: "Planned as intensive workshops plus coaching sessions tied to internship windows.",
+    schedule:
+      "Planned as intensive workshops plus coaching sessions tied to internship windows.",
     expectedOutcomes:
       "Students leave with career-ready materials, stronger interviewing skills, and clearer workforce pathways.",
     participationInstructions:
@@ -324,14 +358,16 @@ export const programsInDevelopment: ProgramDevelopmentDetail[] = [
     studentLearning:
       "Resume building, portfolio development, interview preparation, and workplace professionalism.",
     duration: "Planned 8 to 12 week readiness cycle.",
-    freeOrPaid: "Planned as a free readiness program for accepted participants.",
+    freeOrPaid:
+      "Planned as a free readiness program for accepted participants.",
     location:
       "Community partner sites, school career centers, and employer-partner locations for exposure activities.",
     technologyProvided:
       "Access to portfolio tools, resume resources, and interview preparation technology.",
     parentRegistration:
       "Registration and enrollment guidance will be published as pilot schedules and partner sites are finalized.",
-    nextCohort: "Programs in Development. Launch dates dependent on pilot partner commitments.",
+    nextCohort:
+      "Programs in Development. Launch dates dependent on pilot partner commitments.",
   },
 ];
 
@@ -371,15 +407,18 @@ export const communitiesServed = [
 export const boardRoles = [
   {
     title: "Board Chair",
-    description: "Leadership and governance guidance for organizational growth and community accountability.",
+    description:
+      "Leadership and governance guidance for organizational growth and community accountability.",
   },
   {
     title: "Treasurer",
-    description: "Financial oversight, stewardship planning, and support for sustainable nonprofit operations.",
+    description:
+      "Financial oversight, stewardship planning, and support for sustainable nonprofit operations.",
   },
   {
     title: "Secretary",
-    description: "Governance records, policy support, and board process coordination.",
+    description:
+      "Governance records, policy support, and board process coordination.",
   },
   {
     title: "Community & Industry Advisors",
@@ -391,15 +430,18 @@ export const boardRoles = [
 export const transparencyItems = [
   {
     title: "Organizational Documents",
-    description: "Bylaws, governance materials, and key operating documents will be posted here as they are finalized.",
+    description:
+      "Bylaws, governance materials, and key operating documents will be posted here as they are finalized.",
   },
   {
     title: "Financial Transparency",
-    description: "Annual reporting and stewardship updates will be shared to help supporters understand how resources are used.",
+    description:
+      "Annual reporting and stewardship updates will be shared to help supporters understand how resources are used.",
   },
   {
     title: "Accountability Practices",
-    description: "Impact goals, partner relationships, and program progress will be communicated with clarity and consistency.",
+    description:
+      "Impact goals, partner relationships, and program progress will be communicated with clarity and consistency.",
   },
 ];
 
@@ -410,10 +452,3 @@ export const founderMessagePlaceholder =
   "Personal founder's message coming soon. This space can later highlight Randy Chrisp's personal motivation, lived experience, and long-term vision for Tech Pathways Initiative.";
 
 export const aboutImage = volunteerCollaborationImage;
-
-
-
-
-
-
-
