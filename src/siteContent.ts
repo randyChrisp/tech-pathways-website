@@ -448,7 +448,14 @@ export const transparencyItems = [
 export const founderBio =
   "After building a career across software development, infrastructure, automation, cloud technology, and data solutions, founder Randy Chrisp created Tech Pathways Initiative to help young people gain earlier access to the opportunities, guidance, and industry exposure that can change the direction of a career.";
 
-export const founderMessagePlaceholder =
-  "Personal founder's message coming soon. This space can later highlight Randy Chrisp's personal motivation, lived experience, and long-term vision for Tech Pathways Initiative.";
+export const founderMessage = [
+  "Technology changed the direction of my life. It gave me opportunities to build, solve problems, grow professionally, and imagine possibilities beyond what I once thought was available to me. I founded Tech Pathways Initiative because every young person deserves the opportunity to discover what technology can make possible in their own life.",
+  "Too many talented students—especially those in underserved communities—have limited access to technology education, professional mentors, and meaningful exposure to IT careers. Their potential is not the problem. The opportunity gap is.",
+  "Through hands-on education, mentorship, career exploration, and workforce-development experiences, Tech Pathways Initiative helps students develop practical skills, confidence, and a clearer vision for their futures. Whether a student becomes a software developer, cybersecurity professional, network engineer, entrepreneur, or simply a more confident user of technology, our goal is to help them recognize that they belong in these spaces.",
+  "This mission is deeply personal to me. Tech Pathways Initiative is more than an organization—it is my commitment to opening doors, sharing what I have learned, and creating pathways for the next generation.",
+  "I invite educators, parents, technology professionals, community organizations, volunteers, and supporters to join us. Together, we can ensure that more young people have the knowledge, encouragement, and opportunities they need to build successful futures in technology.",
+  "Randy Chrisp",
+  "Founder, Tech Pathways Initiative",
+];
 
 export const aboutImage = volunteerCollaborationImage;

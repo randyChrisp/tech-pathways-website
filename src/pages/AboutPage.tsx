@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { donationUrl } from "../donation";
+import headshotImage from "../images/headshot.png";
 import {
   aboutImage,
   aboutStory,
@@ -7,7 +8,7 @@ import {
   communitiesServed,
   coreValues,
   founderBio,
-  founderMessagePlaceholder,
+  founderMessage,
   missionStatement,
   visionStatement,
 } from "../siteContent";
@@ -119,17 +120,19 @@ export function AboutPage() {
 
       <section className="section founder-section">
         <div className="founder-layout">
-          <div className="headshot-placeholder" aria-label="Founder headshot placeholder">
-            <span>Professional headshot coming soon</span>
+          <div className="headshot-placeholder">
+            <img src={headshotImage} alt="Randy Chrisp, founder of Tech Pathways Initiative" />
           </div>
           <div className="founder-copy">
             <p className="section-label">Founder</p>
             <h2>Randy Chrisp</h2>
             <p>{founderBio}</p>
-            <div className="founder-message-card">
-              <h3>Founder's Message</h3>
-              <p>{founderMessagePlaceholder}</p>
-            </div>
+          </div>
+          <div className="founder-message-card">
+            <h3>Founder's Message</h3>
+            {founderMessage.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -210,7 +213,4 @@ export function AboutPage() {
     </main>
   );
 }
-
-
-
 
